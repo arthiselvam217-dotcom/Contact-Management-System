@@ -12,7 +12,7 @@ function ContactList({ setContacts, contacts }) {
 
       try {
         const res = await axios.get(
-          "http://localhost:5000/contacts"
+          "https://contact-management-system-p1yx.onrender.com/contacts"
         );
 
         setContacts(res.data);
@@ -34,7 +34,7 @@ function ContactList({ setContacts, contacts }) {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/contacts/${id}`
+        `https://contact-management-system-p1yx.onrender.com/contacts/${id}`
       );
 
       setContacts((prev) =>
@@ -49,7 +49,7 @@ function ContactList({ setContacts, contacts }) {
   const handleStatusChange = async (id, status) => {
     try {
       await axios.patch(
-        `http://localhost:5000/contacts/${id}`,
+        `https://contact-management-system-p1yx.onrender.com/contacts/${id}`,
         { status }
       );
 

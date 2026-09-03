@@ -18,7 +18,7 @@ function ContactForm({ setContacts, contacts }) {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/contacts",
+        "https://contact-management-system-p1yx.onrender.com/contacts",
         {
           name,
           company,
